@@ -50,3 +50,37 @@ VALUES (1, 1),
     (1, 2),
     (2, 1),
     (3, 2)
+    -- Query 1
+
+INSERT INTO
+    students (
+        student_name, age, email, frontend_mark, backend_mark
+    )
+VALUES (
+        'Protik', 26, 'rafiurprotik111@gmail.com', 50, 55
+    )
+
+SELECT s.student_name
+FROM
+    enrollment e
+    JOIN courses c ON e.course_id = c.course_id
+    JOIN students s ON e.student_id = s.student_id
+WHERE
+    c.course_name = 'Next.js'
+
+UPDATE students
+SET
+    statuses = 'Awarded'
+WHERE (frontend_mark + backend_mark) = (
+        SELECT MAX(frontend_mark + backend_mark)
+        FROM students
+    )
+
+SELECT * FROM students
+
+DELETE FROM courses
+WHERE
+    course_id NOT IN (
+        SELECT course_id
+        FROM enrollment
+    )
