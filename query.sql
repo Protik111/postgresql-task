@@ -84,3 +84,15 @@ WHERE
         SELECT course_id
         FROM enrollment
     )
+
+SELECT student_name FROM students LIMIT 2 OFFSET 2
+
+SELECT c.course_name, COUNT(e.student_id) AS num_students_enrolled
+FROM courses c
+    LEFT JOIN enrollment e ON c.course_id = e.course_id
+GROUP BY
+    c.course_name
+
+SELECT AVG(s.age) FROM students s
+
+SELECT student_name FROM students WHERE email LIKE 'example.com'
