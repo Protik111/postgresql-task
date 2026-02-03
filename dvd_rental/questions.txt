@@ -1,0 +1,136 @@
+LEVEL 1 — Basic SELECT (Foundation)
+
+👉 Goal: get comfortable with SELECT, WHERE, ORDER BY, LIMIT
+
+Show all columns from the film table.
+
+Show only title and rental_rate from film.
+
+List all films with rental rate greater than 4.
+
+Find all films released in the year 2006.
+
+Show all customers’ first and last names.
+
+Find customers whose first name is MARY.
+
+List all films ordered by length (longest first).
+
+Show top 5 longest films.
+
+
+
+LEVEL 2 — Filtering & Conditions
+
+👉 Goal: AND, OR, IN, BETWEEN, LIKE
+
+Find films with rental rate between 2 and 4.
+
+Find films with rating PG or PG-13.
+
+Find films whose title starts with A.
+
+Find films whose title contains the word LOVE.
+
+Find customers whose last name ends with SON.
+
+List films longer than 120 minutes and rental rate greater than 3.
+
+
+
+LEVEL 3 — Aggregation & GROUP BY (Very Important)
+
+👉 Goal: COUNT, SUM, AVG, GROUP BY, HAVING
+
+Count total number of films.
+
+Find the average rental rate of all films.
+
+Count how many films exist per rating.
+
+Find the maximum and minimum film length.
+
+Count number of films for each rental rate.
+
+Find ratings that have more than 200 films.
+(Hint: HAVING)
+
+
+
+LEVEL 4 — Basic JOINs (Core Skill)
+
+👉 Goal: understand how tables connect
+
+Show film title with its language name.
+
+Show customer name and their address.
+
+Show customer name with city and country.
+
+Show store ID with its manager’s first and last name.
+
+Show each film and how many copies it has in inventory.
+
+
+
+LEVEL 5 — JOIN + GROUP BY (Real Power)
+
+👉 Goal: combine relationships with aggregation
+
+Count how many films exist per language.
+
+Count how many rentals each customer has made.
+
+Find total number of rentals handled by each staff.
+
+Find total payment amount collected by each staff.
+
+Find total revenue per store.
+
+
+
+LEVEL 6 — Subqueries (Interview Favorite)
+
+👉 Goal: think in layers
+
+Find films with rental rate higher than the average rental rate.
+
+Find customers who have made at least one rental.
+
+Find films that are not present in inventory.
+
+Find customers who have never rented any film.
+
+Find the film(s) with the maximum rental duration.
+
+
+
+LEVEL 7 — Correlated Thinking (Advanced Basic)
+
+👉 Goal: logic mastery
+
+Find customers who rented more films than the average customer.
+
+Find films that were rented more than 10 times.
+
+Find the most rented film.
+
+Find the customer who spent the most money.
+
+Find top 3 highest earning customers.
+
+
+
+LEVEL 8 — Pattern Recognition (Mastery)
+
+👉 These train your SQL intuition
+
+Find each category and number of films in it.
+
+Find categories with average film length greater than 120.
+
+Find actors who acted in more than 20 films.
+
+Find films that belong to more than one category.
+
+Find customers who rented films in more than one category.
