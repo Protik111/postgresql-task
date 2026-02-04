@@ -32,3 +32,26 @@ SELECT last_name FROM customer WHERE last_name LIKE '%SON';
 SELECT title, rental_rate, length 
 FROM film 
 WHERE length > 120 AND rental_rate > 3;
+
+
+-- Level 3
+--👉 Goal: COUNT, SUM, AVG, GROUP BY, HAVING
+SELECT COUNT(*) FROM film;
+
+SELECT avg(rental_rate) AS rate
+FROM film;
+
+SELECT rating, COUNT(*) AS total_films 
+FROM film
+GROUP BY rating;
+
+SELECT max(length), min(length) FROM film;
+
+SELECT rental_rate, COUNT(*) AS total_films
+FROM film
+GROUP BY rental_rate;
+
+SELECT rating, COUNT(*) AS total_films
+FROM film
+GROUP BY rating
+HAVING COUNT(*) > 200
