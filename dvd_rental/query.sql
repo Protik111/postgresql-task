@@ -55,3 +55,33 @@ SELECT rating, COUNT(*) AS total_films
 FROM film
 GROUP BY rating
 HAVING COUNT(*) > 200
+
+
+--LEVEL 4 — Basic JOINs (Core Skill)
+--👉 Goal: understand how tables connect
+SELECT title, name 
+FROM film f
+INNER JOIN language l
+ON f.language_id = l.language_id;
+
+SELECT first_name, last_name, address
+FROM customer c
+INNER JOIN address ad
+ON c.address_id = ad.address_id
+
+SELECT c.first_name, c.last_name, ct.city, cn.country
+FROM customer c
+JOIN address a ON c.address_id = a.address_id
+JOIN city ct ON a.city_id = ct.city_id
+JOIN country cn ON ct.country_id = cn.country_id
+
+SELECT s.store_id, sf.first_name, sf.last_name 
+FROM store s
+JOIN staff sf
+ON s.manager_staff_id = sf.store_id;
+
+SELECT f.title, COUNT(i.inventory_id) AS num_copies
+FROM inventory i 
+JOIN film f ON i.film_id = f.film_id
+GROUP BY f.title
+ORDER BY f.title;
